@@ -8,19 +8,19 @@
             <div class="col-lg-6">
                 <div class="book-content-two">
                     <div class="section-title">
-                        <span class="sp-color">{{ $bookarea->short_title }}</span>
-                        <h2>{{ $bookarea->main_title }}</h2>
+                        <span class="sp-color">{{ optional($bookarea)->short_title }}</span>
+                        <h2>{{ optional($bookarea)->main_title }}</h2>
                         <p>
-                            {{ $bookarea->short_desc }}
+                            {{ optional($bookarea)->short_desc }}
                         </p>
                     </div>
-                    <a href="{{ $bookarea->link_url }}" class="default-btn btn-bg-three">Quick Booking</a>
+                    <a href="{{ optional($bookarea)->link_url }}" class="default-btn btn-bg-three">Quick Booking</a>
                 </div>
             </div>
 
             <div class="col-lg-6">
                 <div class="book-img-2">
-                    <img src="{{ asset($bookarea->image) }}" alt="Images">
+                    <img src="{{ optional($bookarea)->image ? asset($bookarea->image) : '' }}}" alt="Images">
                 </div>
             </div>
         </div>

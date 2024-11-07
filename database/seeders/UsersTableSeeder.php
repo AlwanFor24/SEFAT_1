@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use DB;
-use Illuminate\Support\Facades\DB as FacadesDB;
 use Illuminate\Support\Facades\Hash;
 
 class UsersTableSeeder extends Seeder
@@ -15,7 +14,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        FacadesDB::table('users')->insert([
+        DB::table('users')->insert([
 
             // Admin
             [

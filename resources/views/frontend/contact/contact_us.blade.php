@@ -113,22 +113,22 @@
                             <li>
                                 <i class='bx bx-home-alt'></i>
                                 <div class="content">
-                                    <span>{{ $setting->address }}</span>
-                                    <span>{{ $setting->address }}</span>
+                                    <span>{{ optional($setting)->address }}</span>
+                                    <span>{{ optional($setting)->address }}</span>
                                 </div>
                             </li>
                             <li>
                                 <i class='bx bx-phone-call'></i>
                                 <div class="content">
-                                    <span><a href="tel:{{ $setting->phone }}">{{ $setting->phone }}</a></span>
-                                    <span><a href="tel:{{ $setting->phone }}">{{ $setting->phone }}</a></span>
+                                    <span><a href="tel:{{ optional( $setting )->phone }}">{{ optional($setting)->phone }}</a></span>
+                                    <span><a href="tel:{{ optional($setting)->phone }}">{{ optional($setting)->phone }}</a></span>
                                 </div>
                             </li>
                             <li>
                                 <i class='bx bx-envelope'></i>
                 <div class="content">
-                    <span><a href="{{ $setting->email }}">{{ $setting->email }}</a></span>
-                    <span><a href="{{ $setting->email }}">{{ $setting->email }}</a></span>
+                    <span><a href="{{ optional($setting)->email }}">{{ optional($setting)->email }}</a></span>
+                    <span><a href="{{ optional($setting)->email }}">{{ optional($setting)->email }}</a></span>
                 </div>
                             </li>
                         </ul>

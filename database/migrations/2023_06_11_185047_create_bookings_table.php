@@ -18,13 +18,13 @@ return new class extends Migration
             $table->string('check_in')->nullable();
             $table->string('check_out')->nullable();
             $table->string('persion')->nullable();
-            $table->string('number_of_rooms')->nullable();
+           $table->string('number_of_rooms')->nullable();
 
-            $table->float('total_night')->default(0);
-            $table->float('actual_price')->default(0);
-            $table->float('subtotal')->default(0);
-            $table->integer('discount')->default(0);
-            $table->float('total_price')->default(0);
+            $table->float('total_night')->nullable();
+            $table->float('actual_price')->nullable();
+            $table->float('subtotal')->nullable();
+            $table->integer('discount')->nullable();
+            $table->float('total_price')->nullable();
 
             $table->string('payment_method')->nullable();
             $table->string('transation_id')->nullable();
@@ -39,7 +39,7 @@ return new class extends Migration
             $table->string('address')->nullable();
 
             $table->string('code')->nullable();
-            $table->integer('status')->default(1);
+            $table->integer('status')->nullable();
             $table->timestamps();
         });
     }

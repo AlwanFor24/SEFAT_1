@@ -45,13 +45,18 @@
      <input type="date" name="check_in" class="form-control" id="check_in"  >
         </div>
 
+
+        <?php
+        /*
         <div class="col-md-4">
             <label for="input2" class="form-label">CheckOut</label>
             <input type="date" name="check_out"  class="form-control" id="check_out" >
         </div>
+        */ ?>
 
 
 
+        
         <div class="col-md-4">
             <label for="input3" class="form-label">Room</label>
             <input type="number" name="number_of_rooms" class="form-control" >
@@ -60,14 +65,19 @@
             <div class="mt-2">
                 <label for="">Availability <span class="text-success availability"></span> </label>
             </div>
-
         </div>
+       
 
 
+
+        <?php
+        /*
         <div class="col-md-4">
             <label for="input4" class="form-label">Guest</label>
             <input type="text" name="number_of_person" class="form-control" id="number_of_person"  >
         </div>
+        */ 
+        ?>
 
      <h3 class="mt-3 mb-5 text-center">Customer Information </h3>
 
@@ -86,25 +96,35 @@
             <input type="text" name="phone" class="form-control" value="{{ old('phone') }}"  >
         </div>
 
+        <?php
+        /*
         <div class="col-md-4">
             <label for="input5" class="form-label">Country</label>
             <input type="text" name="country" class="form-control" value="{{ old('country') }}"  >
         </div>
+        */ ?>
 
+        <?php
+        /*
         <div class="col-md-4">
             <label for="input5" class="form-label">Zip Code</label>
             <input type="text" name="zip_code" class="form-control" value="{{ old('zip_code') }}"  >
         </div>
+        */ ?>
 
+
+        <?php
+        /*
         <div class="col-md-4">
             <label for="input5" class="form-label">State</label>
             <input type="text" name="state" class="form-control" value="{{ old('state') }}"  >
         </div>
+        */ ?>
          
        
        
         <div class="col-md-12">
-            <label for="input11" class="form-label">Address</label>
+            <label for="input11" class="form-label">Alamat</label>
             <textarea name="address" class="form-control"  rows="3">{{ old('address') }}</textarea>
         </div>
          
@@ -126,6 +146,8 @@
 			</div>
 
     <script>
+
+        
         $(document).ready(function (){
             $("#room_id").on('change', function (){
                 $("#check_in").val('');
@@ -169,6 +191,8 @@
           } 
 
         }
+
+        
          
     </script>
         

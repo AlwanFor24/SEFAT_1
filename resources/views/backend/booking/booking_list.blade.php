@@ -16,7 +16,7 @@
         </div>
         <div class="ms-auto">
             <div class="btn-group">
-                <a href="{{ route('add.team') }}" class="btn btn-primary px-5">Add Booking </a>
+              <?php /*  <a href="{{ route('add.room.list') }}" class="btn btn-primary px-5">Add Booking  </a> */ ?>
                 
             </div>
         </div>
@@ -38,10 +38,10 @@
                             <th>Customer</th>
                             <th>Room</th>
                             <th>Check IN/Out</th>
-                            <th>Total Room</th>
-                            <th>Guest</th>
-                            <th>Payment</th>
-                            <th>Status</th>
+                            <th>Room Number</th>
+                            <!-- <th>Guest</th>-->
+                            <!--<th>Payment</th>-->
+                            <!--<th>Status</th>-->
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -53,21 +53,32 @@
                             <td> {{ $item->created_at->format('d/m/Y') }} </td>
                             <td> {{ $item['user']['name'] }} </td>
                             <td> {{ $item['room']['type']['name'] }} </td>
-                            <td> <span class="badge bg-primary">{{ $item->check_in }}</span>  /<br> <span class="badge bg-warning text-dark">{{ $item->check_out }}</span> </td>
-                            <td> {{ $item->number_of_rooms }} </td>
-                            <td> {{ $item->persion }} </td>
+                            <td> <span class="badge bg-primary">{{ $item->check_in }}</span>  /<br> <span class="badge bg-warning text-dark"><?php /*{{ $item->check_out }} */ ?></span> </td>
+                             <td>{{ $item->number_of_rooms }} </td> 
+                            <?php /* <td> {{ $item->persion }} </td> */ ?>
+                            <?php
+                            /*
                             <td> @if ($item->payment_status == '1')
                                 <span class="text-success">Complete</span>
                                 @else
                                 <span class="text-danger">Pending</span>
                                  @endif </td>
+                            
+                                 */ ?>
+
+
+                            <?php
+                            /*
                             <td> @if ($item->status == '1')
                                 <span class="text-success">Active</span>
                                 @else
                                 <span class="text-danger">Pending</span>
                                  @endif </td>
-                             
+
+                                 */ ?>
                             <td>
+
+            
  
     <a href="{{ route('delete.team',$item->id) }}" class="btn btn-danger px-3 radius-30" id="delete"> Delete</a>
 
